@@ -13,6 +13,8 @@
 ## 需要注意的销毁
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_3.png)
 
+* 微信 : MrCodeYu 
+* QQ : 535506569
 
 # english 
 ## Custom countdown View for iOS
@@ -25,6 +27,10 @@
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_2.png)
 ## Need to pay attention to destruction
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_3.png)
+
+
+* wechat : MrCodeYu 
+* QQ : 535506569
 
 
 
