@@ -43,4 +43,6 @@
  */
 - (void)invTimer;
 
+- (void)logOpen:(BOOL)isOpen;
+
 @end

@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "DYCountDownView.h"
-
+#import "SecViewController.h"
 
 @interface ViewController ()
 
@@ -35,6 +35,11 @@
     countDownView.center = self.view.center;
     //添加View
     [self.view addSubview:countDownView];
+}
+
+
+- (IBAction)pushToSecViewController:(id)sender {
+    [self.navigationController pushViewController:[[SecViewController alloc]init] animated:YES];
 }
 
 @end

@@ -18,6 +18,7 @@
 		2A48C33C1F7DE87800C67B34 /* DYCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A48C3371F7DE87700C67B34 /* DYCountDownView.m */; };
 		2A48C33D1F7DE87800C67B34 /* UIColor+DYHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A48C3391F7DE87700C67B34 /* UIColor+DYHex.m */; };
 		2A48C33E1F7DE87800C67B34 /* UIView+DYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A48C33B1F7DE87800C67B34 /* UIView+DYFrame.m */; };
+		2AE97DF71F7E1BFD006C2401 /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE97DF61F7E1BFD006C2401 /* SecViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		2A48C3391F7DE87700C67B34 /* UIColor+DYHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DYHex.m"; sourceTree = "<group>"; };
 		2A48C33A1F7DE87700C67B34 /* UIView+DYFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DYFrame.h"; sourceTree = "<group>"; };
 		2A48C33B1F7DE87800C67B34 /* UIView+DYFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DYFrame.m"; sourceTree = "<group>"; };
+		2AE97DF51F7E1BFD006C2401 /* SecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
+		2AE97DF61F7E1BFD006C2401 /* SecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				2A48C3101F7DE85900C67B34 /* LaunchScreen.storyboard */,
 				2A48C3131F7DE85900C67B34 /* Info.plist */,
 				2A48C3021F7DE85900C67B34 /* Supporting Files */,
+				2AE97DF51F7E1BFD006C2401 /* SecViewController.h */,
+				2AE97DF61F7E1BFD006C2401 /* SecViewController.m */,
 			);
 			path = DYCountDownViewDemo;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				2A48C33E1F7DE87800C67B34 /* UIView+DYFrame.m in Sources */,
 				2A48C3071F7DE85900C67B34 /* AppDelegate.m in Sources */,
 				2A48C3041F7DE85900C67B34 /* main.m in Sources */,
+				2AE97DF71F7E1BFD006C2401 /* SecViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +548,7 @@
 				2A48C32E1F7DE85900C67B34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A48C32F1F7DE85900C67B34 /* Build configuration list for PBXNativeTarget "DYCountDownViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +557,7 @@
 				2A48C3311F7DE85900C67B34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A48C3321F7DE85900C67B34 /* Build configuration list for PBXNativeTarget "DYCountDownViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +566,7 @@
 				2A48C3341F7DE85900C67B34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

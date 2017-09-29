@@ -35,7 +35,10 @@
 @property (assign, nonatomic) NSInteger currentTime;
 /**  是否是进入了后台 */
 @property (assign, nonatomic) BOOL isEndterToBackgroud;
+/**  进入后台的计时 */
 @property (assign, nonatomic) NSInteger endterToBackgroudTime;
+/**  是否开启log */
+@property (assign, nonatomic) BOOL isLog;
 
 @end
 
@@ -80,6 +83,10 @@
 
 - (void)dealloc
 {
+    if (self.isLog) {
+        NSLog(@"计时器被销毁");
+    }
+    [self invTimer];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
@@ -328,7 +335,7 @@
     __weak DYCountDownView *weakSelf = self;
     
     self.timer = [NSTimer timerWithTimeInterval:1 target:weakSelf selector:@selector(timerClick) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop currentRunLoop]addTimer:weakSelf.timer forMode:NSRunLoopCommonModes];
 }
 
 /**
@@ -336,6 +343,9 @@
  */
 - (void)timerClick
 {
+    if (self.isLog) {
+        NSLog(@"定时器在运转->剩余秒数%zd",self.currentTime);
+    }
     self.currentTime -=1;
     [self calculation];
 }
@@ -385,6 +395,11 @@
             }
         }
     }
+}
+
+- (void)logOpen:(BOOL)isOpen
+{
+    self.isLog = isOpen;
 }
 
 
