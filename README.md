@@ -13,6 +13,7 @@
 ## 需要注意的销毁
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_3.png)
 
+## 另外要是有疑问随时加我
 * 微信 : MrCodeYu 
 * QQ : 535506569
 
@@ -28,7 +29,7 @@
 ## Need to pay attention to destruction
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_3.png)
 
-
+## if you have question please connent me 
 * wechat : MrCodeYu 
 * QQ : 535506569
 
