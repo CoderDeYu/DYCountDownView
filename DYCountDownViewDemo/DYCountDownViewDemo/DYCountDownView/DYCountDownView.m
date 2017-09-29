@@ -33,6 +33,9 @@
 @property (strong, nonatomic) NSTimer *timer;
 /**  当前时间 */
 @property (assign, nonatomic) NSInteger currentTime;
+/**  是否是进入了后台 */
+@property (assign, nonatomic) BOOL isEndterToBackgroud;
+@property (assign, nonatomic) NSInteger endterToBackgroudTime;
 
 @end
 
@@ -68,6 +71,16 @@
     
     self.secondsFirstLabel = [self addTimeLabel:28 backgroundColor:[UIColor colorWithHexString:@"eef1f3"] text:@"0"];
     self.secondsSecondLabel = [self addTimeLabel:28 backgroundColor:[UIColor colorWithHexString:@"eef1f3"] text:@"0"];
+    
+    //添加监听进入后台和进入前台的监听
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didEndterBackgroud) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didEndterForward) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 /**
@@ -313,6 +326,7 @@
         [self.timer invalidate];
     }
     __weak DYCountDownView *weakSelf = self;
+    
     self.timer = [NSTimer timerWithTimeInterval:1 target:weakSelf selector:@selector(timerClick) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
@@ -334,6 +348,42 @@
     if (self.timer) {
         [self.timer invalidate];
         self.timer = nil;
+    }
+}
+
+- (void)didEndterBackgroud
+{
+    self.isEndterToBackgroud = YES;
+    //销毁定时器
+    [self invTimer];
+    //记住当前时间戳
+    self.endterToBackgroudTime = [[NSDate date]timeIntervalSince1970];
+}
+
+- (void)didEndterForward
+{
+    if (self.isEndterToBackgroud) {
+        self.isEndterToBackgroud = NO;
+        //当前时间减去当时退到后台时间
+        NSInteger currentTime = [[NSDate date]timeIntervalSince1970];
+        NSInteger timeFix = currentTime - self.endterToBackgroudTime;
+        self.currentTime = self.currentTime - timeFix;
+        if (self.currentTime > 0) {
+            //倒计时还是可以继续的
+            [self calculation];
+            [self addTimer];
+        } else {
+            self.hourFirstLabel.text = @"0";
+            self.hourSecondLabel.text = @"0";
+            self.minuteFirstLabel.text = @"0";
+            self.minuteSecondLabel.text = @"0";
+            self.secondsFirstLabel.text = @"0";
+            self.secondsSecondLabel.text = @"0";
+            //倒计时结束了
+            if ([self.delegate respondsToSelector:@selector(countdownViewTimerInv:)]) {
+                [self.delegate countdownViewTimerInv:self];
+            }
+        }
     }
 }
 
