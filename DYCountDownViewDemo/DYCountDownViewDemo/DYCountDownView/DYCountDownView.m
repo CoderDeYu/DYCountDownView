@@ -365,6 +365,7 @@
 
 - (void)didEndterBackgroud
 {
+    if (self.isLog) NSLog(@"进入后台");
     self.isEndterToBackgroud = YES;
     //销毁定时器
     [self invTimer];
@@ -375,6 +376,7 @@
 - (void)didEndterForward
 {
     if (self.isEndterToBackgroud) {
+        if (self.isLog) NSLog(@"进入前台");
         self.isEndterToBackgroud = NO;
         //当前时间减去当时退到后台时间
         NSInteger currentTime = [[NSDate date]timeIntervalSince1970];
