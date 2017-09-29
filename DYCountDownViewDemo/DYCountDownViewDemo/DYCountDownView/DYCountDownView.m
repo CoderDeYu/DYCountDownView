@@ -83,9 +83,11 @@
 
 - (void)dealloc
 {
+    
     if (self.isLog) {
-        NSLog(@"计时器被销毁");
+        NSLog(@"计时器控件被销毁");
     }
+    
     [self invTimer];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }

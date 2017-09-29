@@ -34,6 +34,7 @@
 - (void)dealloc
 {
     NSLog(@"控制器销毁了");
+#warning - 必须要调用一次销毁控件中的定时器  才能让该控件销毁
     [self.countDownView invTimer];
     
 }
