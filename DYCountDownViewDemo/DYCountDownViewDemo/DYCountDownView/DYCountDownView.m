@@ -406,5 +406,12 @@
     self.isLog = isOpen;
 }
 
+#pragma mark--------------view的生命周期
+- (void)removeFromSuperview
+{
+    [super removeFromSuperview];
+    NSLog(@"我被移除了");
+    [self invTimer];
+}
 
 @end

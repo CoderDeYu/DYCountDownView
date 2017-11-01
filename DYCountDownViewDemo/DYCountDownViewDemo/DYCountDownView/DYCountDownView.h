@@ -38,11 +38,6 @@
 /**  :文字的颜色 */
 @property (strong, nonatomic) UIColor *sepColor;
 
-/**
- *  销毁定时器 ->不会触发代理
- */
-- (void)invTimer;
-
 - (void)logOpen:(BOOL)isOpen;
 
 @end
