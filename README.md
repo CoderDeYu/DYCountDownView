@@ -10,8 +10,6 @@
 * 另外补充说明 因为比较简单没有使用其他库 所以就不用pod啦 以后功能复杂再弄pod 我会继续完善的 thanks!
 ## 基本使用
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_2.png)
-## 需要注意的销毁
-![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_3.png)
 
 ## 另外要是有疑问随时加我
 * 微信 : MrCodeYu 
@@ -26,8 +24,6 @@
 * Additional instructions, because relatively simple, did not use other libraries, so you do not use pod, after the complex function, and then get pod, I will continue to improve thanks~!
 ## Basic use
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_2.png)
-## Need to pay attention to destruction
-![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_3.png)
 
 ## if you have question please connent me 
 * wechat : MrCodeYu 
