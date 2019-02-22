@@ -11,8 +11,7 @@
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_2.png)
 
 ## 另外要是有疑问随时加我
-* 微信 : MrCodeYu 
-* QQ : 535506569
+* 提issues
 
 # english 
 ## Custom countdown View for iOS
@@ -24,8 +23,7 @@
 ![](https://github.com/CoderDeYu/DYCountDownView/blob/master/image/Snip20170929_2.png)
 
 ## if you have question please connent me 
-* wechat : MrCodeYu 
-* QQ : 535506569
+* show you issues
 
 
 
